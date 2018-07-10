@@ -26,7 +26,7 @@ require 'pry'
     end
     songs.sort!
     return songs
-  end  
+  end
   def list_artists
     artists = []
     counter = 1
@@ -98,7 +98,7 @@ require 'pry'
     return song_names
   end
   def play_song
-    song_names = self.list_songs
+    song_names = self.return_songs
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     input -= 1
@@ -107,7 +107,6 @@ require 'pry'
     if selection == nil
       return
     end
-    binding.pry
     puts "#{counter}. #{match.artist.name} - #{match.name} - #{match.genre.name}"
   end
   def call
