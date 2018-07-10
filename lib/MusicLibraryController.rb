@@ -110,7 +110,7 @@ require 'pry'
     if selection == nil
       return
     end
-    puts "#{counter}. #{match.artist.name} - #{match.name} - #{match.genre.name}"
+    puts "Playing #{selection.name} by #{selection.artist}"
   end
   def call
     input = ""
