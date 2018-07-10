@@ -101,6 +101,9 @@ require 'pry'
     song_names = self.return_songs
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
+    if input > song_names.size || input < 1
+      return
+    end
     input -= 1
     song = song_names[input]
     selection = Song.find_by_name(song)
