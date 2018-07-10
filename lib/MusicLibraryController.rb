@@ -18,6 +18,15 @@ require 'pry'
       counter += 1
     end
   end
+  def return_songs
+    songs = []
+    counter = 1
+    Song.all.each do |song|
+      songs << song.name
+    end
+    songs.sort!
+    return songs
+  end  
   def list_artists
     artists = []
     counter = 1
